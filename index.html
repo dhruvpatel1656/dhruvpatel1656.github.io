@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dhruv Patel | Computer Science Student & Software Developer</title>
+<meta name="description" content="Dhruv Patel is a Computer Science student at NJIT building software with Python, FastAPI, and machine learning, with hands-on operations experience at Amazon.">
+<meta property="og:title" content="Dhruv Patel | Portfolio">
+<meta property="og:description" content="CS student at NJIT. Projects in AI, backend APIs, and machine learning.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+<style>
+:root{
+  --bg:#f7f9fc; --surface:#ffffff; --text:#152238; --muted:#5b6b82; --border:#e0e6ef;
+  --accent:#1f4e8c; --accent-soft:#e8f0fb; --accent-text:#ffffff; --shadow:0 6px 24px rgba(21,34,56,.08);
+}
+:root[data-theme="dark"]{
+  --bg:#0d1520; --surface:#152233; --text:#e8eef7; --muted:#9fb0c7; --border:#243651;
+  --accent:#6ea8ff; --accent-soft:#1b2d47; --accent-text:#0d1520; --shadow:0 6px 24px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-weight:700;color:var(--text);letter-spacing:.2px}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;align-items:center}
+.nav ul a{color:var(--muted);font-size:.95rem}
+.nav ul a:hover{color:var(--accent);text-decoration:none}
+#theme{background:var(--surface);border:1px solid var(--border);border-radius:999px;width:38px;height:38px;cursor:pointer;font-size:1rem;color:var(--text)}
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1fr 260px;gap:48px;align-items:center}
+.eyebrow{color:var(--accent);font-weight:600;letter-spacing:.5px;font-size:.95rem}
+h1{font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.1;margin:.2em 0 .3em}
+.lead{font-size:1.15rem;color:var(--muted);max-width:56ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;padding:11px 22px;border-radius:10px;font-weight:600;border:1px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-text)}
+.btn.ghost{color:var(--accent);background:transparent}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.photo{width:260px;height:260px;border-radius:50%;object-fit:cover;border:4px solid var(--surface);box-shadow:var(--shadow)}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;padding:0;list-style:none}
+.facts li{background:var(--accent-soft);color:var(--accent);padding:5px 12px;border-radius:999px;font-size:.88rem;font-weight:600}
+section{padding:56px 0}
+section h2{font-size:1.7rem;margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 28px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;box-shadow:var(--shadow)}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
+.project h3{margin:0 0 8px;font-size:1.2rem}
+.project p{color:var(--muted);margin:0 0 12px}
+.project ul.hl{padding-left:18px;margin:0 0 14px;color:var(--muted);font-size:.94rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 16px}
+.tags li{border:1px solid var(--border);border-radius:6px;padding:2px 9px;font-size:.8rem;color:var(--muted);background:var(--bg)}
+.project .links{display:flex;gap:14px;font-weight:600}
+.project{display:flex;flex-direction:column}
+.project .links{margin-top:auto}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:28px}
+.about p{margin:0 0 14px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stat{background:var(--accent-soft);border-radius:12px;padding:16px;text-align:center}
+.stat b{display:block;font-size:1.6rem;color:var(--accent)}
+.stat span{font-size:.85rem;color:var(--muted)}
+.job{display:grid;grid-template-columns:150px 1fr;gap:22px}
+.job .when{color:var(--muted);font-size:.92rem}
+.job h3{margin:0}
+.job .org{color:var(--accent);font-weight:600;margin-bottom:8px}
+.job ul{padding-left:18px;margin:0;color:var(--muted)}
+.job li{margin-bottom:6px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.skills h3{margin:0 0 10px;font-size:1rem;color:var(--accent)}
+.skills .tags{margin:0}
+.lead-list{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.lead-list li{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.lead-list li:last-child{border:none;padding-bottom:0}
+.contact{text-align:center}
+.contact p{max-width:52ch;margin:0 auto 22px;color:var(--muted)}
+.contact .cta{justify-content:center}
+footer{padding:30px 0 40px;text-align:center;color:var(--muted);font-size:.9rem;border-top:1px solid var(--border)}
+@media(max-width:800px){
+  .hero .wrap{grid-template-columns:1fr;text-align:center}
+  .hero .photo{order:-1;margin:0 auto;width:200px;height:200px}
+  .cta,.facts{justify-content:center}
+  .about{grid-template-columns:1fr}
+  .job{grid-template-columns:1fr;gap:6px}
+  .nav ul li:not(:last-child){display:none}
+}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Dhruv Patel</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button id="theme" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Hi, I'm</div>
+      <h1>Dhruv Patel</h1>
+      <p class="lead">Computer Science student who builds AI, backend, and data projects, backed by real operations experience running technology-driven workflows at Amazon.</p>
+      <ul class="facts">
+        <li>B.S. Computer Science, NJIT</li>
+        <li>GPA 3.689</li>
+        <li>Amazon Process Assistant (L3)</li>
+      </ul>
+      <div class="cta">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn ghost" href="assets/Dhruv_Patel_Resume.pdf" target="_blank" rel="noopener">View resume</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <img class="photo" src="assets/profile.jpg" alt="Portrait of Dhruv Patel">
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p class="sub">A developer's mindset, shaped by a fast-moving warehouse floor.</p>
+    <div class="about">
+      <div>
+        <p>I'm a Computer Science student at the New Jersey Institute of Technology (NJIT), expecting to graduate in May 2028. I enjoy building practical software: retrieval-augmented AI apps, secure REST APIs, and machine learning models on real data.</p>
+        <p>Since August 2024 I've worked at Amazon's sortation center in Carteret, NJ, where I'm now a Level 3 Process Assistant. Day to day I troubleshoot internal process software, watch automated conveyor systems, track labor against deadlines, and coach associates. That work taught me how systems behave under pressure, and I bring the same root-cause mindset to my code.</p>
+        <p>I also serve as President of the Gujarati Undergraduate Student Association at NJIT, where I lead the executive board and organize events with 200+ attendees. I'm looking for a software engineering internship where I can keep learning and ship useful work.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>3</b><span>Full projects on GitHub</span></div>
+        <div class="stat"><b>2+ yrs</b><span>At Amazon</span></div>
+        <div class="stat"><b>200+</b><span>Attendees at events I lead</span></div>
+        <div class="stat"><b>3.689</b><span>GPA at NJIT</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="sub">Each project is open source on GitHub with a README, tests, and setup steps.</p>
+    <div class="grid3">
+
+      <article class="card project">
+        <h3>AI Document Q&amp;A Assistant (RAG)</h3>
+        <p>Upload PDFs or text files and ask questions in plain English. The app finds the most relevant passages and, with an API key, has Claude write an answer that cites its sources.</p>
+        <ul class="hl">
+          <li>Text embeddings with sentence-transformers and FAISS vector search</li>
+          <li>FastAPI backend with upload, ask, and health endpoints</li>
+          <li>Automated tests for chunking, retrieval, persistence, and the API</li>
+        </ul>
+        <ul class="tags"><li>Python</li><li>FastAPI</li><li>FAISS</li><li>Embeddings</li><li>LLM API</li></ul>
+        <div class="links"><a href="https://github.com/dhruvpatel1656/doc-qa-rag" target="_blank" rel="noopener">View on GitHub →</a></div>
+      </article>
+
+      <article class="card project">
+        <h3>Secure Banking Transactions API</h3>
+        <p>A banking-style REST API for accounts, deposits, withdrawals, and transfers, built around security and correctness.</p>
+        <ul class="hl">
+          <li>JWT authentication and role-based access for customers and admins</li>
+          <li>Money stored as integer cents; transfers run in one database transaction with ordered row locks</li>
+          <li>PostgreSQL with Docker, pytest suite, and a GitHub Actions pipeline that tests every push</li>
+        </ul>
+        <ul class="tags"><li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>Docker</li><li>GitHub Actions</li></ul>
+        <div class="links"><a href="https://github.com/dhruvpatel1656/secure-banking-api" target="_blank" rel="noopener">View on GitHub →</a></div>
+      </article>
+
+      <article class="card project">
+        <h3>Fraud Detection ML Model</h3>
+        <p>A machine learning pipeline that flags fraudulent credit card transactions in a highly imbalanced dataset (0.173% fraud).</p>
+        <ul class="hl">
+          <li>Compared Logistic Regression, Random Forest, and Gradient Boosting with class weighting and threshold tuning</li>
+          <li>Best model: Random Forest with 0.864 precision, 0.829 recall, and 0.842 PR-AUC on a held-out test set</li>
+          <li>Written analysis of precision and recall trade-offs</li>
+        </ul>
+        <ul class="tags"><li>Python</li><li>scikit-learn</li><li>pandas</li><li>Imbalanced data</li></ul>
+        <div class="links"><a href="https://github.com/dhruvpatel1656/fraud-detection-ml" target="_blank" rel="noopener">View on GitHub →</a></div>
+      </article>
+
+    </div>
+    <p style="margin-top:22px"><a href="https://github.com/dhruvpatel1656" target="_blank" rel="noopener">See all repositories on GitHub →</a></p>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <p class="sub">Technology and operations work in a high-volume environment.</p>
+    <div class="card job">
+      <div class="when">Aug 2024 – Present<br>Carteret, NJ</div>
+      <div>
+        <h3>Process Assistant (L3), Inbound, Mezz &amp; Outbound</h3>
+        <div class="org">Amazon Sortation Center</div>
+        <ul>
+          <li>Operate and troubleshoot Amazon's internal process software, including Vista, Dock Console, OB SSP, and FMC, to keep package records accurate and dispatch on schedule.</li>
+          <li>Monitor SCADA-controlled conveyor and sortation systems and escalate faults to maintenance and IT to limit downtime.</li>
+          <li>Use yard management and dock tools to track trailers and coordinate on-time departures.</li>
+          <li>Trace failed moves in Vista and reconcile system records with physical inventory before defects escalate.</li>
+          <li>Redesigned a consolidation workflow, cutting a 20-pallet load to 11 pallets (about 45% fewer) and lowering the need for ad hoc transportation.</li>
+          <li>Train and coach associates on SOPs, safety, and system usage.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <p class="sub">What I work with.</p>
+    <div class="skills">
+      <div class="card"><h3>Languages</h3><ul class="tags"><li>Python</li><li>Java</li><li>JavaScript</li><li>SQL</li><li>PHP</li><li>HTML/CSS</li></ul></div>
+      <div class="card"><h3>Backend &amp; DevOps</h3><ul class="tags"><li>FastAPI</li><li>Flask</li><li>REST APIs</li><li>PostgreSQL</li><li>Docker</li><li>GitHub Actions</li><li>pytest</li></ul></div>
+      <div class="card"><h3>AI &amp; Data</h3><ul class="tags"><li>RAG</li><li>FAISS</li><li>scikit-learn</li><li>pandas</li><li>NumPy</li><li>LLM APIs</li></ul></div>
+      <div class="card"><h3>CS Foundations</h3><ul class="tags"><li>Data structures &amp; algorithms</li><li>OOP</li><li>Database design</li><li>Operating systems</li><li>Discrete math</li></ul></div>
+      <div class="card"><h3>Security &amp; Quality</h3><ul class="tags"><li>JWT auth</li><li>Password hashing</li><li>Input validation</li><li>Debugging</li><li>Root-cause analysis</li></ul></div>
+      <div class="card"><h3>Operations Systems</h3><ul class="tags"><li>Vista</li><li>SCADA</li><li>Yard management</li><li>Dock Console</li><li>OB SSP</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="leadership">
+  <div class="wrap">
+    <h2>Leadership &amp; Involvement</h2>
+    <p class="sub">Leading teams and events on campus and in the community.</p>
+    <div class="card">
+      <ul class="lead-list">
+        <li><span><b>President</b>, Gujarati Undergraduate Student Association (GUSA), NJIT<br><small style="color:var(--muted)">Leads the executive board, budgeting, and events with 200+ participants.</small></span><span style="color:var(--muted)">Jan 2025 – Present</span></li>
+        <li><span><b>Event Coordinator</b>, Hindu YUVA Club, NJIT<br><small style="color:var(--muted)">Plans cultural and educational events with volunteer teams.</small></span><span style="color:var(--muted)">Sep 2024 – Present</span></li>
+        <li><span><b>Volunteer</b>, BAPS Swaminarayan Temple, Edison, NJ<br><small style="color:var(--muted)">Supports large community events and teamwork.</small></span><span style="color:var(--muted)">Sep 2023 – Present</span></li>
+        <li><span><b>Student Excellence Award</b></span><span style="color:var(--muted)">Sep 2023</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p>I'm open to software engineering internships and entry-level roles. The best way to reach me is by email or LinkedIn.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:dhruvpatel1656@gmail.com">Email me</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/dhruv-patel-402a45329/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/dhruvpatel1656" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="yr"></span> Dhruv Patel. Built with plain HTML, CSS and JavaScript, hosted on GitHub Pages.</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('theme');
+  var saved=null; try{saved=localStorage.getItem('theme')}catch(e){}
+  var dark = saved ? saved==='dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function apply(){root.setAttribute('data-theme',dark?'dark':'light');btn.textContent=dark?'☀️':'🌙'}
+  apply();
+  btn.addEventListener('click',function(){dark=!dark;apply();try{localStorage.setItem('theme',dark?'dark':'light')}catch(e){}});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
